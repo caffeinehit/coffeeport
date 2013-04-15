@@ -169,3 +169,8 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 25))
 EMAIL_SUBJECT_PREFIX = os.environ.get('EMAIL_SUBJECT_PREFIX', '[Django] ')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'False') == 'True'
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'coffeeport.herokuapp.com'
+    ]

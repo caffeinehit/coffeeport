@@ -1,1 +1,1 @@
-web: DEBUG=True gunicorn coffeeport.wsgi --workers 8 --max-requests 500
+web: gunicorn coffeeport.wsgi --workers 8 --max-requests 500
