@@ -103,8 +103,6 @@ class BurgerIndexView(ListCreateAPIView):
     serializer_class = BurgerSerializer
     def latency(self):
         """ We're in space. Communication takes time ... """
-        if settings.DEBUG:
-            return 0
         latency = random.randint(1, 20)
         time.sleep(latency)
         return latency

@@ -6,7 +6,6 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     os.environ.get('ADMINS', 'No One!example@example.com').split('!'),
-    ('alen', 'alen@owns.ch'),
 )
 
 MANAGERS = ADMINS
@@ -104,20 +103,15 @@ TEMPLATE_LOADERS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
-    'django.core.context_processors.tz',
-    'django.contrib.messages.context_processors.messages',
-    'django.core.context_processors.request',
 )
 
 ROOT_URLCONF = os.environ.get('ROOT_URLCONF', 'coffeeport.urls')
@@ -135,7 +129,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
-
+    'gunicorn',
     'rest_framework',
     'coffeeport.app',
 )
