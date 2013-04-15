@@ -1,0 +1,1 @@
+web: gunicorn coffeeport.wsgi --workers 8 --max-requests 500

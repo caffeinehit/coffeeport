@@ -6,6 +6,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     os.environ.get('ADMINS', 'No One!example@example.com').split('!'),
+    ('alen', 'alen@owns.ch'),
 )
 
 MANAGERS = ADMINS
